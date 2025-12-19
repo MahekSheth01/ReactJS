@@ -1,12 +1,66 @@
-# React + Vite
+# ReactJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains both **theoretical concepts** and **practical implementations** related to **ReactJS**, built using **React + Vite**.  
+It is designed for learners and developers who want to understand React fundamentals and build modern web applications.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 React + Vite Setup
 
-## Expanding the ESLint configuration
+This project uses **Vite** for fast development with **HMR (Hot Module Replacement)** and ESLint rules.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Official Plugins
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) – uses Babel for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) – uses SWC for Fast Refresh
+
+---
+
+## 📚 Theoretical Concepts
+
+- **What is ReactJS**
+  - JavaScript library for building UIs
+  - Component-based & declarative
+  - Maintained by Facebook (Meta)
+
+- **Core Concepts**
+  - Functional & Class Components
+  - JSX
+  - Props & State
+  - Lifecycle methods
+  - Conditional rendering
+  - Lists & Keys
+  - Event handling
+
+- **Hooks**
+  - useState
+  - useEffect
+  - useRef
+  - useContext
+  - Custom Hooks
+
+- **Routing**
+  - React Router
+  - Nested & Dynamic routes
+
+- **State Management**
+  - Local State
+  - Context API
+  - Redux (future)
+
+---
+
+## 💻 Practical Implementations
+
+- Functional components & JSX
+- Props vs State examples
+- Event handling
+- Conditional rendering
+- Lists using `.map()`
+- React Hooks use-cases
+- React Router navigation
+- Mini projects:
+  - Todo App
+  - Counter App
+  - Form handling
+  - API fetching
+  - Dynamic routing
