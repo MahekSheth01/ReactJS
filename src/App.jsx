@@ -1,3 +1,4 @@
+import Todo from "./ex1";
 import Header from "./Header";
 import Login, { Signup, User } from "./UserComponent";
 
@@ -12,6 +13,7 @@ function App(){
       <Header />
       <Login />
       <Signup />
+      <Todo/>
       <h1>{User}</h1>
     </div>
   )
