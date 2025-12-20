@@ -1,6 +1,6 @@
 function Header(){
     return <div>
-        <h2>Header data</h2>
+        <h2>codewithmee</h2>
     </div>
 }
 export default Header;
