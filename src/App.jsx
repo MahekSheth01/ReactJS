@@ -26,6 +26,8 @@ function App(){
     age:21,
     email:"mahek@123.com"
   }
+  let arr=[10,20,30,40,50];
+  let path="https://images.pexels.com/photos/4473877/pexels-photo-4473877.jpeg";
   return (
     <div>
       <h1>React JS - Day 3</h1>
@@ -34,6 +36,9 @@ function App(){
       <h2>Sum of a+b : {sum(10,2)}</h2>
       <h3>Operation output : {opr(10,2,"sub")}</h3>
       <h4>Condition output: {name?name:"User not found"}</h4>
+      <h3>Object fetching :{userObj.name}</h3>
+      <h4>Array : {arr[1]}</h4>
+      <image src={path} alt="random img" width="300"/>
       {/* <Header />
       <Login />
       <Signup />
