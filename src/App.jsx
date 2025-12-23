@@ -28,6 +28,10 @@ function App(){
   }
   let arr=[10,20,30,40,50];
 let path = "https://images.pexels.com/photos/4473877/pexels-photo-4473877.jpeg";
+
+const fruit=()=>{
+  alert("Fruit function called");
+}
   return (
     <div>
       <h1>React JS - Day 3</h1>
@@ -39,6 +43,7 @@ let path = "https://images.pexels.com/photos/4473877/pexels-photo-4473877.jpeg";
       <h3>Object fetching :{userObj.name}</h3>
       <h4>Array : {arr[1]}</h4>
       <img src={path} alt="random img" width="300"/>
+      <button onClick={fruit}>Fruit Button</button>
       {/* <Header />
       <Login />
       <Signup />
