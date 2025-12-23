@@ -1,3 +1,4 @@
+import Counter from "./Counter";
 import Todo from "./ex1";
 import Header from "./Header";
 import Login, { Signup, User } from "./UserComponent";
@@ -51,6 +52,7 @@ function handleFruit(){
       <button onClick={()=>fruit("Banana")}>Banana</button> */}
       <h1>Selected Fruit: {fruit}</h1>
       <button onClick={handleFruit}>Change Name</button>
+      <Counter />
       {/* <Header />
       <Login />
       <Signup />
