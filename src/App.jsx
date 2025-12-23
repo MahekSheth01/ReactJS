@@ -1,6 +1,7 @@
 import Todo from "./ex1";
 import Header from "./Header";
 import Login, { Signup, User } from "./UserComponent";
+import {useState} from "react";
 
 function App(){
   function handleClick(){
@@ -29,22 +30,27 @@ function App(){
   let arr=[10,20,30,40,50];
 let path = "https://images.pexels.com/photos/4473877/pexels-photo-4473877.jpeg";
 
-const fruit=(name)=>{
-  alert(name);
+let [fruit,setFruit]=useState("Apple");
+
+function handleFruit(){
+  setFruit("Mango");
 }
+
   return (
     <div>
       <h1>React JS - Day 3</h1>
       {/* <button onClick={handleClick}>Click Me</button> */}
-      <h1>Username:{name}</h1>
+      {/* <h1>Username:{name}</h1>
       <h2>Sum of a+b : {sum(10,2)}</h2>
       <h3>Operation output : {opr(10,2,"sub")}</h3>
       <h4>Condition output: {name?name:"User not found"}</h4>
       <h3>Object fetching :{userObj.name}</h3>
       <h4>Array : {arr[1]}</h4>
-      <img src={path} alt="random img" width="300"/>
-      <button onClick={()=>fruit("Apple")}>Apple</button><br></br>
-      <button onClick={()=>fruit("Banana")}>Banana</button>
+      <img src={path} alt="random img" width="300"/> */}
+      {/* <button onClick={()=>fruit("Apple")}>Apple</button><br></br>
+      <button onClick={()=>fruit("Banana")}>Banana</button> */}
+      <h1>Selected Fruit: {fruit}</h1>
+      <button onClick={handleFruit}>Change Name</button>
       {/* <Header />
       <Login />
       <Signup />
