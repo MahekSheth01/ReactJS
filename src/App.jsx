@@ -1,6 +1,7 @@
 import Counter from "./Counter";
 import Todo from "./ex1";
 import Header from "./Header";
+import MultiToggle from "./MultiConditionToggle";
 import Toggle from "./Toggle";
 import Login, { Signup, User } from "./UserComponent";
 import {useState} from "react";
@@ -40,6 +41,7 @@ function handleFruit(){
 
   return (
     <div>
+      <MultiToggle/>
       <Toggle />
       <h1>React JS</h1>
       {/* <button onClick={handleClick}>Click Me</button> */}
