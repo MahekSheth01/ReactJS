@@ -1,6 +1,7 @@
 import Counter from "./Counter";
 import Todo from "./ex1";
 import Header from "./Header";
+import Toggle from "./Toggle";
 import Login, { Signup, User } from "./UserComponent";
 import {useState} from "react";
 
@@ -39,7 +40,8 @@ function handleFruit(){
 
   return (
     <div>
-      <h1>React JS - Day 3</h1>
+      <Toggle />
+      <h1>React JS</h1>
       {/* <button onClick={handleClick}>Click Me</button> */}
       {/* <h1>Username:{name}</h1>
       <h2>Sum of a+b : {sum(10,2)}</h2>
