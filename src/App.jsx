@@ -1,3 +1,4 @@
+import College from "./College";
 import Counter from "./Counter";
 import Todo from "./ex1";
 import Header from "./Header";
@@ -49,10 +50,25 @@ let userDetails={
   age:21,
   email:"maheksheth@gmail.com"}
 
+
+let userDetails1={
+  name:"Riya Sheth",
+  age:21,
+  email:"riyaasheth@gmail.com"}
+
+let userDetails2={
+  name:"Kaushik Sheth",
+  age:63,
+  email:"kmsheth@gmail.com"}
+
+  let Colleges=["DKIET","LNCT","RGPV","IIT"];
   return (
     <div>
-
+      <College name={Colleges}/>
       <User1 user={userDetails}/>
+      <User1 user={userDetails1}/>
+      <User1 user={userDetails2}/>
+      
 
       
       <MultiToggle/>
