@@ -68,7 +68,12 @@ let userDetails2={
   const [sname,setName]=useState();
   return (
     <div>
-      <Wrapper />
+      <Wrapper>        <h1>Wrapper Component</h1>
+</Wrapper>
+    <Wrapper>      
+        <h1>Hello Mahek</h1>
+        <h3 style={{color:"red"}}>Please login</h3>
+</Wrapper>
   {    
     sname&&<Student name={sname}/>
   }   
