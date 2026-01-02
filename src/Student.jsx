@@ -1,4 +1,4 @@
-function Student({name})
+function Student({name="No Name"})
 {
     return(
         <div>

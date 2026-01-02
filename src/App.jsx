@@ -8,6 +8,7 @@ import Toggle from "./Toggle";
 import User1 from "./User";
 import Login, { Signup, User } from "./UserComponent";
 import {useState} from "react";
+import Wrapper from "./Wrapper";
 
 function App(){
   function handleClick(){
@@ -67,6 +68,7 @@ let userDetails2={
   const [sname,setName]=useState();
   return (
     <div>
+      <Wrapper />
   {    
     sname&&<Student name={sname}/>
   }   
@@ -75,6 +77,7 @@ let userDetails2={
       setName("Mahuu")
     }
   }>Update Student Name</button>   
+  <Student name={sname} />
   <College name={Colleges}/>
       <User1 user={userDetails}/>
       <User1 user={userDetails1}/>
