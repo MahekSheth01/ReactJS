@@ -10,6 +10,7 @@ import Login, { Signup, User } from "./UserComponent";
 import {useState} from "react";
 import Wrapper from "./Wrapper";
 import InputFiled from "./InputFiled";
+import ControlledComponent from "./ControlledComponent";
 
 function App(){
   function handleClick(){
@@ -69,6 +70,9 @@ let userDetails2={
   const [sname,setName]=useState();
   return (
     <div>
+      <ControlledComponent/>
+
+
       <InputFiled/>
       <Wrapper color="orange">        <h1>Wrapper Component</h1>
 </Wrapper>
