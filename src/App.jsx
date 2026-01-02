@@ -3,6 +3,7 @@ import Todo from "./ex1";
 import Header from "./Header";
 import MultiToggle from "./MultiConditionToggle";
 import Toggle from "./Toggle";
+import User1 from "./User";
 import Login, { Signup, User } from "./UserComponent";
 import {useState} from "react";
 
@@ -10,7 +11,7 @@ function App(){
   function handleClick(){
     alert("Button Clicked");
   }
-  const name=undefined;
+  // const name=undefined;
   function sum(a,b){
     return a+b;
   }
@@ -39,8 +40,21 @@ function handleFruit(){
   setFruit("Mango");
 }
 
+// let name="Mahek Sheth";
+// let age=21;
+// let email="maheksheth@gmail.com"
+
+let userDetails={
+  name:"Mahek Sheth",
+  age:21,
+  email:"maheksheth@gmail.com"}
+
   return (
     <div>
+
+      <User1 user={userDetails}/>
+
+      
       <MultiToggle/>
       <Toggle />
       <h1>React JS</h1>

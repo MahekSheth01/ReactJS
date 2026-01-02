@@ -1,8 +1,10 @@
-function User(){
+function User1({user}){
     return (
         <div>  
-    <h1>User Component</h1>
+            <h1>Name is : {user.name}</h1>
+            <h2>Age is : {user.age}</h2>
+            <h3>Email is : {user.email}</h3>
         </div>
     )
 }
-export default User;
+export default User1;
