@@ -3,6 +3,7 @@ import Counter from "./Counter";
 import Todo from "./ex1";
 import Header from "./Header";
 import MultiToggle from "./MultiConditionToggle";
+import Student from "./Student";
 import Toggle from "./Toggle";
 import User1 from "./User";
 import Login, { Signup, User } from "./UserComponent";
@@ -62,9 +63,19 @@ let userDetails2={
   email:"kmsheth@gmail.com"}
 
   let Colleges=["DKIET","LNCT","RGPV","IIT"];
+
+  const [sname,setName]=useState();
   return (
     <div>
-      <College name={Colleges}/>
+  {    
+    sname&&<Student name={sname}/>
+  }   
+  <button onClick={
+    ()=>{
+      setName("Mahuu")
+    }
+  }>Update Student Name</button>   
+  <College name={Colleges}/>
       <User1 user={userDetails}/>
       <User1 user={userDetails1}/>
       <User1 user={userDetails2}/>
