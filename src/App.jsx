@@ -14,6 +14,7 @@ import ControlledComponent from "./ControlledComponent";
 import Checkbox from "./Checkbox";
 import Radio from "./Radio";
 import DropDown from "./DropDown";
+import Loop from "./Loop";
 
 function App(){
   function handleClick(){
@@ -73,6 +74,7 @@ let userDetails2={
   const [sname,setName]=useState();
   return (
     <div>
+      <Loop/>
       <DropDown/>
       <Radio name="female"/>
       <Checkbox/>

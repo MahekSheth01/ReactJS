@@ -1,7 +1,7 @@
 import React from 'react'
 
 const DropDown = () => {
-    const [city,setCity]=React.useState("");
+    const [city,setCity]=React.useState("Delhi");
     const handleChange=(event)=>{
         setCity(event.target.value);
     }

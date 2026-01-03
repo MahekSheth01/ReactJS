@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Radio = (name="female") => {
-    const [gender,setGender]=useState("");
+    const [gender,setGender]=useState("male");
 
     const handleChange=(event)=>{
         setGender(event.target.value);
@@ -10,11 +10,11 @@ const Radio = (name="female") => {
   return (
     <div>
       <h1>Select Gender:{gender}</h1>
-      <input onChange={handleChange} type="radio" value="female" name="gender" id="female" />
+      <input onChange={handleChange} checked={gender=="female"} type="radio" value="female" name="gender" id="female" />
         <label for="female"> Female</label><br/>
-      <input onChange={handleChange} type="radio" value="male" name="gender" id="male" />
+      <input onChange={handleChange} type="radio" checked={gender=="male"} value="male" name="gender" id="male" />
         <label for="male"> Male</label><br/>
-      <input onChange={handleChange} type="radio" value="other" name="gender" id="other" />
+      <input onChange={handleChange} type="radio" value="other" checked={gender=="other"} name="gender" id="other" />
         <label for="other"> Other</label><br/>    
        
     </div>
