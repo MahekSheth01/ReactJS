@@ -12,6 +12,7 @@ import Wrapper from "./Wrapper";
 import InputFiled from "./InputFiled";
 import ControlledComponent from "./ControlledComponent";
 import Checkbox from "./Checkbox";
+import Radio from "./Radio";
 
 function App(){
   function handleClick(){
@@ -71,6 +72,7 @@ let userDetails2={
   const [sname,setName]=useState();
   return (
     <div>
+      <Radio name="female"/>
       <Checkbox/>
       <ControlledComponent/>
 
