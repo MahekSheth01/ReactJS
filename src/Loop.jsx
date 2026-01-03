@@ -1,4 +1,5 @@
 import React from 'react'
+import Reuse from './Reuse'
 
 const Loop = () => {
     const userData=[{
@@ -27,6 +28,16 @@ const Loop = () => {
   return (
     <div>
       <h1 style={{color:"orange"}}>User Data</h1>
+
+       <h2>Reuse Component</h2>
+       {
+        userData.map((user)=>(
+            <div key={user.id} style={{color:"teal",border:"2px solid black",margin:"10px",padding:"10px",width:"300px"}}>
+                <Reuse data={user}/>
+            </div>
+        ))
+       }
+
       <table>
         <thead style={{backgroundColor:"lightgrey"}}>
             <tr>
