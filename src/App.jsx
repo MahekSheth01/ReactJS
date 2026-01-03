@@ -15,6 +15,7 @@ import Checkbox from "./Checkbox";
 import Radio from "./Radio";
 import DropDown from "./DropDown";
 import Loop from "./Loop";
+import Clock from "./Clock";
 
 function App(){
   function handleClick(){
@@ -72,8 +73,22 @@ let userDetails2={
   let Colleges=["DKIET","LNCT","RGPV","IIT"];
 
   const [sname,setName]=useState();
+  const [color,setColor]=useState("green");
+  function changeColor(event){
+    setColor(event.target.value);
+  }
   return (
     <div>
+      <h1>Select Colour</h1>
+      <select onChange={changeColor} name="clock" id="">
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="black">Black</option>
+      </select>
+      <Clock color={color}/>
+
       <Loop/>
       <DropDown/>
       <Radio name="female"/>
