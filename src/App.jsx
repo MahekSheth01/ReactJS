@@ -21,6 +21,7 @@ import Clock from "./Clock";
 import NestedLoop from "./NestedLoop";
 import Hook from "./Hook";
 import Hooks from "./Hooks";
+import InlineStyle from "./InlineStyle";
 
 function App() {
 
@@ -113,7 +114,7 @@ function App() {
   /* ===== JSX RETURN ===== */
   return (
     <div>
-
+      <InlineStyle/>
       {/* Hooks Example */}
       <Hooks count={count} data={data} />
       <button onClick={handleClick}>Counter</button>
