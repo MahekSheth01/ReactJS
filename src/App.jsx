@@ -18,6 +18,7 @@ import Loop from "./Loop";
 import Clock from "./Clock";
 import NestedLoop from "./NestedLoop";
 import Hook from "./Hook";
+import Hooks from "./Hooks";
 function App(){
   function handleClick(){
     alert("Button Clicked");
@@ -78,10 +79,23 @@ let userDetails2={
   function changeColor(event){
     setColor(event.target.value);
   }
+  const [count,setCount]=useState(0);
+  function handleClick(){
+      setCount(count+1);
+      console.log(count);
+  }
+  const [data,setData]=useState("");
+  function handleData(){
+      setData("Fetching Data...");
+      console.log(data);
+  }
   return (
     <div>
+      <Hooks count={count} data={data}/>
+      <button onClick={handleClick}>Counter</button>
+      <button onClick={handleData}>Data</button>
       <Hook/>
-\      <NestedLoop/>
+     <NestedLoop/>
       <h1>Select Colour</h1>
       <select onChange={changeColor} name="clock" id="">
         <option value="green">Green</option>
