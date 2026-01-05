@@ -16,6 +16,7 @@ import Radio from "./Radio";
 import DropDown from "./DropDown";
 import Loop from "./Loop";
 import Clock from "./Clock";
+import NestedLoop from "./NestedLoop";
 
 function App(){
   function handleClick(){
@@ -79,6 +80,7 @@ let userDetails2={
   }
   return (
     <div>
+      <NestedLoop/>
       <h1>Select Colour</h1>
       <select onChange={changeColor} name="clock" id="">
         <option value="green">Green</option>
