@@ -1,3 +1,6 @@
+import { useState } from "react";
+
+/* ===== COMPONENT IMPORTS ===== */
 import College from "./College";
 import Counter from "./Counter";
 import Todo from "./ex1";
@@ -7,7 +10,6 @@ import Student from "./Student";
 import Toggle from "./Toggle";
 import User1 from "./User";
 import Login, { Signup, User } from "./UserComponent";
-import {useState} from "react";
 import Wrapper from "./Wrapper";
 import InputFiled from "./InputFiled";
 import ControlledComponent from "./ControlledComponent";
@@ -19,145 +21,167 @@ import Clock from "./Clock";
 import NestedLoop from "./NestedLoop";
 import Hook from "./Hook";
 import Hooks from "./Hooks";
-function App(){
-  function handleClick(){
+
+function App() {
+
+  /* ===== BASIC FUNCTIONS ===== */
+  function handleClick() {
     alert("Button Clicked");
   }
-  // const name=undefined;
-  function sum(a,b){
-    return a+b;
+
+  function sum(a, b) {
+    return a + b;
   }
-  function opr(a,b,c){
-    if (c==="add"){
-      return a+b;
-    }
-    else if(c==="sub"){
-      return a-b;
-    }
-    else{
+
+  function opr(a, b, c) {
+    if (c === "add") {
+      return a + b;
+    } else if (c === "sub") {
+      return a - b;
+    } else {
       return "Invalid Operation";
     }
   }
-  let userObj={
-    name:"Mahek Sheth",
-    age:21,
-    email:"mahek@123.com"
+
+  /* ===== VARIABLES & OBJECTS ===== */
+  let userObj = {
+    name: "Mahek Sheth",
+    age: 21,
+    email: "mahek@123.com"
+  };
+
+  let arr = [10, 20, 30, 40, 50];
+
+  let path =
+    "https://images.pexels.com/photos/4473877/pexels-photo-4473877.jpeg";
+
+  /* ===== STATE: FRUIT ===== */
+  let [fruit, setFruit] = useState("Apple");
+
+  function handleFruit() {
+    setFruit("Mango");
   }
-  let arr=[10,20,30,40,50];
-let path = "https://images.pexels.com/photos/4473877/pexels-photo-4473877.jpeg";
 
-let [fruit,setFruit]=useState("Apple");
+  /* ===== USER DATA ===== */
+  let userDetails = {
+    name: "Mahek Sheth",
+    age: 21,
+    email: "maheksheth@gmail.com"
+  };
 
-function handleFruit(){
-  setFruit("Mango");
-}
+  let userDetails1 = {
+    name: "Riya Sheth",
+    age: 21,
+    email: "riyaasheth@gmail.com"
+  };
 
-// let name="Mahek Sheth";
-// let age=21;
-// let email="maheksheth@gmail.com"
+  let userDetails2 = {
+    name: "Kaushik Sheth",
+    age: 63,
+    email: "kmsheth@gmail.com"
+  };
 
-let userDetails={
-  name:"Mahek Sheth",
-  age:21,
-  email:"maheksheth@gmail.com"}
+  /* ===== COLLEGE ARRAY ===== */
+  let Colleges = ["DKIET", "LNCT", "RGPV", "IIT"];
 
+  /* ===== STATE: STUDENT NAME ===== */
+  const [sname, setName] = useState();
 
-let userDetails1={
-  name:"Riya Sheth",
-  age:21,
-  email:"riyaasheth@gmail.com"}
+  /* ===== STATE: CLOCK COLOR ===== */
+  const [color, setColor] = useState("green");
 
-let userDetails2={
-  name:"Kaushik Sheth",
-  age:63,
-  email:"kmsheth@gmail.com"}
-
-  let Colleges=["DKIET","LNCT","RGPV","IIT"];
-
-  const [sname,setName]=useState();
-  const [color,setColor]=useState("green");
-  function changeColor(event){
+  function changeColor(event) {
     setColor(event.target.value);
   }
-  const [count,setCount]=useState(0);
-  function handleClick(){
-      setCount(count+1);
-      console.log(count);
+
+  /* ===== STATE: COUNTER ===== */
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+    console.log(count);
   }
-  const [data,setData]=useState("");
-  function handleData(){
-      setData("Fetching Data...");
-      console.log(data);
+
+  /* ===== STATE: DATA ===== */
+  const [data, setData] = useState("");
+
+  function handleData() {
+    setData("Fetching Data...");
+    console.log(data);
   }
+  
+  /* ===== JSX RETURN ===== */
   return (
     <div>
-      <Hooks count={count} data={data}/>
+
+      {/* Hooks Example */}
+      <Hooks count={count} data={data} />
       <button onClick={handleClick}>Counter</button>
       <button onClick={handleData}>Data</button>
-      <Hook/>
-     <NestedLoop/>
+
+      <Hook />
+      <NestedLoop />
+
+      {/* Clock Color Selection */}
       <h1>Select Colour</h1>
-      <select onChange={changeColor} name="clock" id="">
+      <select onChange={changeColor} name="clock">
         <option value="green">Green</option>
         <option value="red">Red</option>
         <option value="blue">Blue</option>
         <option value="yellow">Yellow</option>
         <option value="black">Black</option>
       </select>
-      <Clock color={color}/>
 
-      <Loop/>
-      <DropDown/>
-      <Radio name="female"/>
-      <Checkbox/>
-      <ControlledComponent/>
+      <Clock color={color} />
 
+      {/* Form Components */}
+      <Loop />
+      <DropDown />
+      <Radio name="female" />
+      <Checkbox />
+      <ControlledComponent />
+      <InputFiled />
 
-      <InputFiled/>
-      <Wrapper color="orange">        <h1>Wrapper Component</h1>
-</Wrapper>
-    <Wrapper>      
+      {/* Wrapper Component */}
+      <Wrapper color="orange">
+        <h1>Wrapper Component</h1>
+      </Wrapper>
+
+      <Wrapper>
         <h1>Hello Mahek</h1>
-        <h3 style={{color:"red"}}>Please login</h3>
-</Wrapper>
-  {    
-    sname&&<Student name={sname}/>
-  }   
-  <button onClick={
-    ()=>{
-      setName("Mahuu")
-    }
-  }>Update Student Name</button>   
-  <Student name={sname} />
-  <College name={Colleges}/>
-      <User1 user={userDetails}/>
-      <User1 user={userDetails1}/>
-      <User1 user={userDetails2}/>
-      
+        <h3 style={{ color: "red" }}>Please login</h3>
+      </Wrapper>
 
-      
-      <MultiToggle/>
+      {/* Conditional Rendering */}
+      {sname && <Student name={sname} />}
+
+      <button onClick={() => setName("Mahuu")}>
+        Update Student Name
+      </button>
+
+      <Student name={sname} />
+
+      {/* Props Passing */}
+      <College name={Colleges} />
+
+      <User1 user={userDetails} />
+      <User1 user={userDetails1} />
+      <User1 user={userDetails2} />
+
+      {/* Toggle Components */}
+      <MultiToggle />
       <Toggle />
+
       <h1>React JS</h1>
-      {/* <button onClick={handleClick}>Click Me</button> */}
-      {/* <h1>Username:{name}</h1>
-      <h2>Sum of a+b : {sum(10,2)}</h2>
-      <h3>Operation output : {opr(10,2,"sub")}</h3>
-      <h4>Condition output: {name?name:"User not found"}</h4>
-      <h3>Object fetching :{userObj.name}</h3>
-      <h4>Array : {arr[1]}</h4>
-      <img src={path} alt="random img" width="300"/> */}
-      {/* <button onClick={()=>fruit("Apple")}>Apple</button><br></br>
-      <button onClick={()=>fruit("Banana")}>Banana</button> */}
+
+      {/* Fruit State */}
       <h1>Selected Fruit: {fruit}</h1>
       <button onClick={handleFruit}>Change Name</button>
+
       <Counter />
-      {/* <Header />
-      <Login />
-      <Signup />
-      <Todo/> */}
-      {/* <h1>{User}</h1> */}
+
     </div>
-  )
+  );
 }
+
 export default App;
