@@ -22,6 +22,7 @@ import NestedLoop from "./NestedLoop";
 import Hook from "./Hook";
 import Hooks from "./Hooks";
 import InlineStyle from "./InlineStyle";
+import StyledComp from "./StyledComp";
 
 function App() {
 
@@ -114,6 +115,7 @@ function App() {
   /* ===== JSX RETURN ===== */
   return (
     <div>
+      <StyledComp/>
       <InlineStyle/>
       {/* Hooks Example */}
       <Hooks count={count} data={data} />
