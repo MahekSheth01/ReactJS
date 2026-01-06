@@ -24,7 +24,7 @@ import Hooks from "./Hooks";
 import InlineStyle from "./InlineStyle";
 import StyledComp from "./StyledComp";
 import Boostraped from "./Boostraped";
-
+import HookuseRef from "./HookuseRef";
 function App() {
 
   /* ===== BASIC FUNCTIONS ===== */
@@ -116,6 +116,7 @@ function App() {
   /* ===== JSX RETURN ===== */
   return (
     <div>
+      <HookuseRef/>
       <Boostraped/>
       <StyledComp/>
       <InlineStyle/>
