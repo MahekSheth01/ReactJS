@@ -10,6 +10,8 @@ function MultiToggle(){
                 count==0?<h2>Count is Zero</h2>
                 :count==1?<h2>Count is One</h2>
                 :count==2?<h2>Count is Two</h2>
+                :count==3? <h2>Count is Three</h2>
+                :count==4?<h2>Count is Four</h2>
                 :<h2>Count is Greater than Two</h2>
             }
         </div>
