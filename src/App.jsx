@@ -28,6 +28,7 @@ import HookuseRef from "./HookuseRef";
 import UnControlledComponent from "./UnControlledComponent";
 import FuncAsProp from "./FuncAsProp";
 import HookUseFormStatus from "./HookUseFormStatus";
+import HookUseTransition from "./HookUseTransition";
 function App() {
 
   /* ===== BASIC FUNCTIONS ===== */
@@ -122,6 +123,7 @@ function App() {
   /* ===== JSX RETURN ===== */
   return (
     <div>
+      <HookUseTransition/>
       <HookUseFormStatus/>
       <h1>Passing function as props in component</h1>
 
