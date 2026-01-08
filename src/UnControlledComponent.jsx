@@ -30,7 +30,7 @@ const UnControlledComponent = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
-
+    <br /><br />
        <h1>Uncontrolled Component with useRef</h1>
       <form action="" method="post" onSubmit={handleRef}>
         Enter Name : <input type="text" ref={userRef} id="usernameref" name="username" />
