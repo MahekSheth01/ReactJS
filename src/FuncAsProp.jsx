@@ -1,9 +1,9 @@
 import React from 'react'
 
-const FuncAsProp = () => {
+const FuncAsProp = ({func,name}) => {
   return (
     <div>
-      <h1>Passing function as props in component</h1>
+      <button onClick={()=>{func(name)}}>Show name</button>
     </div>
   )
 }

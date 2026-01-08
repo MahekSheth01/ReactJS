@@ -26,6 +26,7 @@ import StyledComp from "./StyledComp";
 import Boostraped from "./Boostraped";
 import HookuseRef from "./HookuseRef";
 import UnControlledComponent from "./UnControlledComponent";
+import FuncAsProp from "./FuncAsProp";
 function App() {
 
   /* ===== BASIC FUNCTIONS ===== */
@@ -114,9 +115,18 @@ function App() {
     console.log(data);
   }
   
+  const passFunc=(name)=>{
+    alert(name);
+  }
   /* ===== JSX RETURN ===== */
   return (
     <div>
+      <h1>Passing function as props in component</h1>
+
+      <FuncAsProp func={passFunc} name="Mahek"/>
+      <FuncAsProp func={passFunc} name="Peter"/>
+      <FuncAsProp func={passFunc} name="Joe"/>
+      <FuncAsProp func={passFunc} name="Ria"/>
       <UnControlledComponent/>
       <HookuseRef/>
       <Boostraped/>
