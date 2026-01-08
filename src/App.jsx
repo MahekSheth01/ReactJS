@@ -27,6 +27,7 @@ import Boostraped from "./Boostraped";
 import HookuseRef from "./HookuseRef";
 import UnControlledComponent from "./UnControlledComponent";
 import FuncAsProp from "./FuncAsProp";
+import HookUseFormStatus from "./HookUseFormStatus";
 function App() {
 
   /* ===== BASIC FUNCTIONS ===== */
@@ -121,6 +122,7 @@ function App() {
   /* ===== JSX RETURN ===== */
   return (
     <div>
+      <HookUseFormStatus/>
       <h1>Passing function as props in component</h1>
 
       <FuncAsProp func={passFunc} name="Mahek"/>
