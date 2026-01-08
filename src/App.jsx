@@ -25,6 +25,7 @@ import InlineStyle from "./InlineStyle";
 import StyledComp from "./StyledComp";
 import Boostraped from "./Boostraped";
 import HookuseRef from "./HookuseRef";
+import UnControlledComponent from "./UnControlledComponent";
 function App() {
 
   /* ===== BASIC FUNCTIONS ===== */
@@ -116,6 +117,7 @@ function App() {
   /* ===== JSX RETURN ===== */
   return (
     <div>
+      <UnControlledComponent/>
       <HookuseRef/>
       <Boostraped/>
       <StyledComp/>
