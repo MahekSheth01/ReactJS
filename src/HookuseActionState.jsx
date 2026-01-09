@@ -9,10 +9,10 @@ const HookuseActionState = () => {
     await new Promise((res) => setTimeout(res, 2000));
 
     if (!name || !password) {
-      return { error: "Please enter all fields" };
+      return { error: "Please enter all fields",name,password };
     }
 
-    return { message: "Data Submitted!!" };
+    return { message: "Data Submitted!!",name,password };
   };
 
   const [data, action, pending] = useActionState(handleSubmit, null);
@@ -22,10 +22,10 @@ const HookuseActionState = () => {
       <h1>useActionState Hook</h1>
 
       <form action={action}>
-        <input type="text" name="name" placeholder="Enter name" />
+        <input defaultValue={data?.name} type="text" name="name" placeholder="Enter name" />
         <br /><br />
 
-        <input type="password" name="password" placeholder="Enter password" />
+        <input defaultValue={data?.password} type="password" name="password" placeholder="Enter password" />
         <br /><br />
 
         <button disabled={pending}>
@@ -39,6 +39,8 @@ const HookuseActionState = () => {
       </form>
 
       <hr />
+      <h2>Name : {data?.name}</h2>
+      <h2>Password : {data?.password}</h2>
     </div>
   );
 };
