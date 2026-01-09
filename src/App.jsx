@@ -32,6 +32,7 @@ import HookUseTransition from "./HookUseTransition";
 import Derived from "./Derived";
 import Parent from "./Parent";
 import UpdateObject from "./UpdateObject";
+import UpdateArray from "./UpdateArray";
 function App() {
 
   /* ===== BASIC FUNCTIONS ===== */
@@ -126,6 +127,7 @@ function App() {
   /* ===== JSX RETURN ===== */
   return (
     <div>
+      <UpdateArray/>
       <UpdateObject/>
       <Parent/>
       <Derived/>
