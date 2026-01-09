@@ -30,6 +30,7 @@ import FuncAsProp from "./FuncAsProp";
 import HookUseFormStatus from "./HookUseFormStatus";
 import HookUseTransition from "./HookUseTransition";
 import Derived from "./Derived";
+import Parent from "./Parent";
 function App() {
 
   /* ===== BASIC FUNCTIONS ===== */
@@ -124,6 +125,7 @@ function App() {
   /* ===== JSX RETURN ===== */
   return (
     <div>
+      <Parent/>
       <Derived/>
       <HookUseTransition/>
       <HookUseFormStatus/>
