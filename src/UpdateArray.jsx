@@ -17,6 +17,12 @@ const UpdateArray = () => {
         data[data.length-1]=name
         setData([...data])
     }
+
+    const handleUser=(age)=>{
+        user[user.length-1].age=age
+        setUser([...user])
+    }
+
   return (
     <div>
         <input type="text" onChange={(e)=>handleName(e.target.value)} placeholder='update name' name="" id="" />
@@ -29,6 +35,8 @@ const UpdateArray = () => {
 
       <hr />
       <hr /><hr />
+    <input type="text" onChange={(e)=>handleUser(e.target.value)} placeholder='update user' name="" id="" />
+
       {
         user.map((item,index)=>(
             <h3 key={index}>{item.name}---{item.age}</h3>
