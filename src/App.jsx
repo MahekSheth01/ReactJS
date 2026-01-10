@@ -34,6 +34,7 @@ import Parent from "./Parent";
 import UpdateObject from "./UpdateObject";
 import UpdateArray from "./UpdateArray";
 import HookuseActionState from "./HookuseActionState";
+import HookuseId from "./HookuseId";
 function App() {
 
   /* ===== BASIC FUNCTIONS ===== */
@@ -128,6 +129,7 @@ function App() {
   /* ===== JSX RETURN ===== */
   return (
     <div>
+      <HookuseId/>
       <HookuseActionState/>
       <UpdateArray/>
       <UpdateObject/>
