@@ -27,6 +27,13 @@ function UseForm(){
          <label htmlFor={password}>Enter Password : </label> 
         <input type="password" id="password" placeholder='Enter password' name=""  />
       </form>
+
+      <form action="" method='POST'>
+        <label htmlFor={name}>Enter Name : </label> 
+        <input type="text" id="name" placeholder='Enter Name' name=""  /><br /><br />
+         <label htmlFor={password}>Enter Password : </label> 
+        <input type="password" id="password" placeholder='Enter password' name=""  />
+      </form>
     </div>
   )
 }

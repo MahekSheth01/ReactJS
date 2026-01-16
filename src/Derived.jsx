@@ -11,6 +11,7 @@ const Derived = () => {
   };
 
   // Derived State
+  
   const total = users.length;
   const last = users.length > 0 ? users[users.length - 1] : 'None';
   const unique = new Set(users).size;
